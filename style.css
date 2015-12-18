@@ -1,0 +1,152 @@
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: 'Tahoma';
+	background-color: #141414;
+}
+
+.container {
+	max-width: 64em;
+	margin: 0px auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.center {
+	margin: 0px auto;
+}
+
+.nav-container {
+	width: 100%;
+	background: #222222;
+	position: fixed;
+	padding-top: .75em;
+	height: auto;
+	top: 0;
+}
+
+.nav-container .logo {
+	background: url('http://a.dilcdn.com/sw/navigation/sw_logo_horiz-134953209f00.png');
+	max-width: 365px;
+	height: 37px;
+    margin: 0px auto;
+    margin-bottom: .75em;
+}
+
+.nav-container .nav-list {
+	width: 100%;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.nav-container .nav-list .container {
+	height: auto;
+}
+
+.nav-container nav {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: visible;
+    z-index: 2;
+}
+
+.nav-container nav ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.nav-container nav ul li {
+	flex: 1;
+	border-right: 1px solid #333;
+	border-left: 1px solid #333;
+}
+
+.nav-container .nav-list .container nav ul li a {
+	/*background: pink;*/
+	height: 70px;
+	text-decoration: none;
+	background: #222222;
+	transition: all .3s ease-in-out;
+	color: #666;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-container .nav-list .container nav ul li a:hover {
+	background: #111;
+}
+
+.content {
+	/*background: #222;*/
+	min-height: 586px;
+	margin-top: 134px;
+	color: #D7D7D7;
+}
+.content h1 {
+	font-size: 2.5rem
+	font-weight: 300;
+	font-family: 'Pontano Sans', sans-serif;
+}
+
+.content iframe {
+	width: 100%;
+}
+
+.grid-container {
+	width: 100%;
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+    flex-wrap: wrap;
+}
+
+[class*='grid-span-'] {
+	padding: 1em;
+}
+
+.grid-span-full {
+	width: 100%;
+}
+
+.grid-span-full-spec {
+	background: url('img/forceawakens.png');
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 30em;
+}
+
+@media screen and (max-width: 968px) {
+	.grid-span-half {
+		width: 100%;
+	}
+
+	.content iframe {
+		height: 520px;
+	}
+}
+
+@media screen and (min-width: 969px) {
+	.grid-span-half {
+		width: 50%;
+	}
+
+	.content iframe {
+		height: 290px;
+	}
+}
