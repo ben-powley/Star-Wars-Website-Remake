@@ -139,6 +139,10 @@ body {
 	.content iframe {
 		height: 520px;
 	}
+
+	.nav-container .nav-list {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 969px) {
@@ -148,5 +152,9 @@ body {
 
 	.content iframe {
 		height: 290px;
+	}
+
+	.nav-container .nav-list {
+		display: block;
 	}
 }
