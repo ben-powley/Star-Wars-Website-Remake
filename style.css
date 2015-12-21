@@ -14,6 +14,11 @@ body {
 	background-color: #141414;
 }
 
+button {
+	border: none;
+	box-shadow: none;
+}
+
 .container {
 	max-width: 64em;
 	margin: 0px auto;
@@ -42,53 +47,6 @@ body {
 	height: 37px;
     margin: 0px auto;
     margin-bottom: .75em;
-}
-
-.nav-container .nav-list {
-	width: 100%;
-	border-top: 1px solid #333;
-	border-bottom: 1px solid #333;
-}
-
-.nav-container .nav-list .container {
-	height: auto;
-}
-
-.nav-container nav {
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
-	overflow: visible;
-    z-index: 2;
-}
-
-.nav-container nav ul {
-	display: flex;
-	align-items: center;
-	list-style: none;
-}
-
-.nav-container nav ul li {
-	flex: 1;
-	border-right: 1px solid #333;
-	border-left: 1px solid #333;
-}
-
-.nav-container .nav-list .container nav ul li a {
-	/*background: pink;*/
-	height: 70px;
-	text-decoration: none;
-	background: #222222;
-	transition: all .3s ease-in-out;
-	color: #666;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.nav-container .nav-list .container nav ul li a:hover {
-	background: #111;
 }
 
 .content {
@@ -140,8 +98,98 @@ body {
 		height: 520px;
 	}
 
-	.nav-container .nav-list {
+	.nav-container .nav-list .container nav {
+	}
+
+	.nav-hide {
 		display: none;
+	}
+
+	.nav-show {
+		display: block;
+	}
+
+	.nav-container .nav-list .container .nav-toggle {
+		margin: 0px auto;
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+	}
+
+	.nav-container .nav-list .container .nav-toggle .nav-button {
+		background: silver;
+		height: 5px;
+		width: 50px;
+		margin: 10px 0;
+		position: absolute;
+        display: block;
+		top: 75px;
+	}
+
+	.nav-container .nav-list .container .nav-toggle .nav-button:before {
+		content: "";
+		background: rgb(55,132,214);
+		box-shadow: 0px 0px 10px #2B73DA;
+		border-right: 10px solid silver;
+		height: 5px;
+		width: 50px;
+		top: -15px;
+		position: absolute;
+        display: block;
+	}
+
+	.nav-container .nav-list .container .nav-toggle .nav-button:after {
+		content: "";
+		background: red;
+		box-shadow: 0px 0px 10px #D6221A;
+		border-left: 10px solid silver;
+		height: 5px;
+		width: 50px;
+		bottom: -15px;
+		position: absolute;
+        display: block;
+	}
+
+	.nav-container .nav-list {
+		width: 100%;
+		border-top: 1px solid #333;
+		border-bottom: 1px solid #333;
+	}
+
+	.nav-container .nav-list .container {
+		height: auto;
+	}
+
+	.nav-container nav {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: visible;
+	    z-index: 3;
+	}
+
+	.nav-container nav ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		list-style: none;
+	}
+
+	.nav-container nav ul li {
+		padding: 1em;
+		width: 100%;
+		text-align: center;
+	}
+
+	.nav-container nav ul li a {
+		padding: 1em;
+		color: #666;
+		text-decoration: none;
+	}
+
+	.nav-container nav ul li:hover, .nav-container nav ul li:active, .nav-container nav ul li:focus {
+		background: #111;
 	}
 }
 
@@ -156,5 +204,56 @@ body {
 
 	.nav-container .nav-list {
 		display: block;
+	}
+
+	.nav-container .nav-list .container .nav-toggle {
+		display: none;
+	}
+
+	.nav-container .nav-list {
+		width: 100%;
+		border-top: 1px solid #333;
+		border-bottom: 1px solid #333;
+	}
+
+	.nav-container .nav-list .container {
+		height: auto;
+	}
+
+	.nav-container nav {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: visible;
+	    z-index: 2;
+	}
+
+	.nav-container nav ul {
+		display: flex;
+		align-items: center;
+		list-style: none;
+	}
+
+	.nav-container nav ul li {
+		flex: 1;
+		border-right: 1px solid #333;
+		border-left: 1px solid #333;
+	}
+
+	.nav-container .nav-list .container nav ul li a {
+		/*background: pink;*/
+		height: 70px;
+		text-decoration: none;
+		background: #222222;
+		transition: all .3s ease-in-out;
+		color: #666;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.nav-container .nav-list .container nav ul li a:hover {
+		background: #111;
 	}
 }
