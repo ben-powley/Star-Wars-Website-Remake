@@ -261,7 +261,7 @@ footer .footer-content {
 	content: "";
 	display: block;
 	height: 2px;
-	width: 100px;
+	width: 70px;
 	background: #E15021;
 	margin: 0px auto;
 	transition: all .3s ease-in-out;
@@ -374,9 +374,7 @@ footer .footer-content {
 
 	.nav-container .nav-list .container .nav-toggle .nav-button:before {
 		content: "";
-		background: rgb(55,132,214);
-		box-shadow: 0px 0px 10px #2B73DA;
-		border-right: 10px solid silver;
+		background: white;
 		height: 2.5px;
 		width: 50px;
 		top: -15px;
@@ -387,9 +385,7 @@ footer .footer-content {
 
 	.nav-container .nav-list .container .nav-toggle .nav-button:after {
 		content: "";
-		background: red;
-		box-shadow: 0px 0px 10px #D6221A;
-		border-left: 10px solid silver;
+		background: white;
 		height: 2.5px;
 		width: 50px;
 		bottom: -15px;
@@ -403,11 +399,17 @@ footer .footer-content {
 	}
 
 	.active:before {
+		background: rgb(55,132,214) !important;
+		box-shadow: 0px 0px 10px #2B73DA;
+		border-right: 10px solid silver;
 		top: 0 !important;
 		transform: rotate(45deg);
 	}
 
 	.active:after { 
+		background: red !important;
+		box-shadow: 0px 0px 10px #D6221A;
+		border-left: 10px solid silver;
 		bottom: 0 !important;
 		transform: rotate(-45deg);
 	}
